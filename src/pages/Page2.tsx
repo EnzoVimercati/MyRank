@@ -1,17 +1,18 @@
 import { Header } from '../components/Header'
 import '../styles/about.css'
-import fotoPerfil from '../assets/Novo Projeto (5).jpg'
-import banner from '../assets/Novo Projeto (4).jpg'
 import { useEffect, useRef } from 'react'
-import rocket from "../assets/rocket (1).svg"
-import alvo from "../assets/target.svg"
-import engrenagem from "../assets/cog.svg"
-import ferramenta from "../assets/wrench.svg"
-import sobre from "../assets/app-window.svg"
-import interesses from "../assets/scan.svg"
-import Features from '../assets/spline-pointer.svg'
 import { Loading } from '../components/Loading'
 import { Footer } from '../components/Footer'
+
+const fotoPerfil = new URL('../assets/Novo Projeto (5).jpg', import.meta.url).href
+const banner = new URL('../assets/Novo Projeto (4).jpg', import.meta.url).href
+const rocket = new URL('../assets/rocket (1).svg', import.meta.url).href
+const alvo = new URL('../assets/target.svg', import.meta.url).href
+const engrenagem = new URL('../assets/cog.svg', import.meta.url).href
+const ferramenta = new URL('../assets/wrench.svg', import.meta.url).href
+const sobre = new URL('../assets/app-window.svg', import.meta.url).href
+const interesses = new URL('../assets/scan.svg', import.meta.url).href
+const Features = new URL('../assets/spline-pointer.svg', import.meta.url).href
 
 export function Page2(){
     const containerRef = useRef<HTMLDivElement>(null)

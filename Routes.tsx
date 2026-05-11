@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route} from 'react-router'
-
+import { Navigate } from 'react-router-dom' 
+import type { ReactNode } from 'react'
 import { Home } from './src/pages/Home.tsx';
 import { Page2 } from './src/pages/Page2.tsx';
 import { Page3 } from './src/pages/Page3.tsx';
