@@ -1,18 +1,18 @@
 import { Header } from '../components/Header'
 import '../styles/about.css'
+import fotoPerfil from '../assets/Novo Projeto (5).jpg'
+import banner from '../assets/background.png'
 import { useEffect, useRef } from 'react'
+import rocket from "../assets/rocket (1).svg"
+import alvo from "../assets/target.svg"
+import engrenagem from "../assets/cog.svg"
+import ferramenta from "../assets/wrench.svg"
+import sobre from "../assets/app-window.svg"
+import interesses from "../assets/scan.svg"
+import Features from '../assets/spline-pointer.svg'
 import { Loading } from '../components/Loading'
 import { Footer } from '../components/Footer'
-
-const fotoPerfil = new URL('../assets/Novo Projeto (5).jpg', import.meta.url).href
-const banner = new URL('../assets/Novo Projeto (4).jpg', import.meta.url).href
-const rocket = new URL('../assets/rocket (1).svg', import.meta.url).href
-const alvo = new URL('../assets/target.svg', import.meta.url).href
-const engrenagem = new URL('../assets/cog.svg', import.meta.url).href
-const ferramenta = new URL('../assets/wrench.svg', import.meta.url).href
-const sobre = new URL('../assets/app-window.svg', import.meta.url).href
-const interesses = new URL('../assets/scan.svg', import.meta.url).href
-const Features = new URL('../assets/spline-pointer.svg', import.meta.url).href
+import fototaina from "../assets/foto-taina.jpg"
 
 export function Page2(){
     const containerRef = useRef<HTMLDivElement>(null)
@@ -56,18 +56,30 @@ export function Page2(){
             <div className="about-container" ref={containerRef}>
                 <img src={banner} alt="Banner" className="about-banner-img" />
                 <div className="about-profile-section">
-                    <div className="about-profile-pic-container">
-                        <img 
-                            src={fotoPerfil} 
-                            alt="Foto de Perfil" 
-                            className="about-profile-pic"
-                        />
+                    <div style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '30px' }}>
+                        <div className="about-profile-pic-container">
+                            <img 
+                                src={fotoPerfil} 
+                                alt="Foto de Enzo" 
+                                className="about-profile-pic"
+                            />
+                            <p style={{ textAlign: 'center', marginTop: '10px', fontWeight: 'bold' }}>Enzo Vimercati</p>
+                        </div>
+                        <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>+</div>
+                        <div className="about-profile-pic-container">
+                            <img 
+                                src={fototaina} 
+                                alt="Foto de Taina" 
+                                className="about-profile-pic"
+                            />
+                            <p style={{ textAlign: 'center', marginTop: '10px', fontWeight: 'bold' }}>Taina de Souza Silva Martins</p>
+                        </div>
                     </div>
 
                     <div className="about-profile-info">
                         <p className="dev-title"> <img src={rocket} alt="Rocket" className="about-rocket-img" /> MyRank - App de Ranking</p>
                         <h1>Sistema de Avaliação & Rankings</h1>
-                        <p>Uma aplicação web que permite aos usuários avaliar, organizar e rankear seus filmes, séries e livros favoritos. Construída com tecnologias modernas, autenticação segura e design responsivo para proporcionar a melhor experiência do usuário.</p>
+                        <p>Uma aplicação web que permite aos usuários avaliar, organizar e rankear seus filmes, séries e livros favoritos. Desenvolvida por uma dupla de desenvolvedoras com tecnologias modernas, autenticação segura e design responsivo para proporcionar a melhor experiência do usuário.</p>
                     </div>
                 </div>
                 <div className="about-content">
@@ -124,7 +136,11 @@ export function Page2(){
                 </div>
                 <div className="about-cta-section">
                     <h2>Vamos conversar sobre seu projeto?</h2>
-                    <a href="https://www.linkedin.com/in/enzo-vimercati-93794b393/"><button className="about-cta-btn">Conectar comigo</button></a> 
+                    <p style={{ marginBottom: '20px', color: '#b0b0b0' }}>Entre em contato com nossa dupla de desenvolvedoras</p>
+                    <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <a href="https://www.linkedin.com/in/enzo-vimercati-93794b393/"><button className="about-cta-btn">Conectar com Enzo</button></a>
+                        <a href="https://www.linkedin.com/in/tain%C3%A1martinss/"><button className="about-cta-btn">Conectar com Taina</button></a>
+                    </div>
                 </div>
             </div>
             <Footer />
